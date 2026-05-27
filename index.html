@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JS Models Salon</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#111;
+      color:white;
+      line-height:1.6;
+    }
+
+    header{
+      background:#000;
+      padding:20px;
+      position:fixed;
+      width:100%;
+      top:0;
+      z-index:1000;
+    }
+
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    nav h1{
+      color:gold;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:20px;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+    }
+
+    nav a:hover{
+      color:gold;
+    }
+
+    .hero{
+      height:100vh;
+      background:url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1600') center/cover;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:20px;
+    }
+
+    .hero-content{
+      background:rgba(0,0,0,0.6);
+      padding:40px;
+      border-radius:10px;
+    }
+
+    .hero h2{
+      font-size:50px;
+      margin-bottom:20px;
+      color:gold;
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:20px;
+      padding:12px 25px;
+      background:gold;
+      color:black;
+      text-decoration:none;
+      border-radius:5px;
+      font-weight:bold;
+    }
+
+    section{
+      padding:80px 20px;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:40px;
+      color:gold;
+      font-size:36px;
+    }
+
+    .services{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+    }
+
+    .card{
+      background:#222;
+      border-radius:10px;
+      overflow:hidden;
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+    }
+
+    .card img{
+      width:100%;
+      height:200px;
+      object-fit:cover;
+    }
+
+    .card-content{
+      padding:20px;
+    }
+
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:15px;
+    }
+
+    .gallery img{
+      width:100%;
+      border-radius:10px;
+      height:250px;
+      object-fit:cover;
+    }
+
+    form{
+      max-width:600px;
+      margin:auto;
+      display:flex;
+      flex-direction:column;
+      gap:15px;
+    }
+
+    input, textarea, select{
+      padding:15px;
+      border:none;
+      border-radius:5px;
+    }
+
+    button{
+      padding:15px;
+      background:gold;
+      border:none;
+      font-weight:bold;
+      cursor:pointer;
+      border-radius:5px;
+    }
+
+    footer{
+      background:#000;
+      text-align:center;
+      padding:20px;
+      color:#aaa;
+    }
+
+    @media(max-width:768px){
+      nav{
+        flex-direction:column;
+        gap:10px;
+      }
+
+      .hero h2{
+        font-size:35px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <h1>JS MODELS</h1>
+
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#booking">Booking</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <h2>Beauty, Style & Confidence</h2>
+    <p>Luxury salon experience for hair, makeup, spa and beauty care.</p>
+    <a href="#booking" class="btn">Book Now</a>
+  </div>
+</section>
+
+<section id="services">
+  <h2 class="section-title">Our Services</h2>
+
+  <div class="services">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600">
+      <div class="card-content">
+        <h3>Hair Styling</h3>
+        <p>Professional styling and trendy cuts.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1487412912498-0447578fcca8?w=600">
+      <div class="card-content">
+        <h3>Makeup</h3>
+        <p>Bridal and party makeup services.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600">
+      <div class="card-content">
+        <h3>Nail Art</h3>
+        <p>Modern nail designs and manicure.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="gallery">
+  <h2 class="section-title">Gallery</h2>
+
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600">
+    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600">
+    <img src="https://images.unsplash.com/photo-1487412912498-0447578fcca8?w=600">
+    <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600">
+  </div>
+</section>
+
+<section id="booking">
+  <h2 class="section-title">Book Appointment</h2>
+
+  <form id="bookingForm">
+
+    <input type="text" placeholder="Your Name" required>
+
+    <input type="email" placeholder="Email Address" required>
+
+    <input type="tel" placeholder="Phone Number" required>
+
+    <select required>
+      <option value="">Select Service</option>
+      <option>Hair Styling</option>
+      <option>Makeup</option>
+      <option>Nail Art</option>
+    </select>
+
+    <textarea rows="5" placeholder="Message"></textarea>
+
+    <button type="submit">Submit Booking</button>
+
+  </form>
+</section>
+
+<section id="contact">
+  <h2 class="section-title">Contact Us</h2>
+
+  <div style="text-align:center;">
+    <p>Email: jsmodels@email.com</p>
+    <p>Phone: +94 77 123 4567</p>
+    <p>Location: Colombo, Sri Lanka</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 JS Models Salon. All Rights Reserved.</p>
+</footer>
+
+<script>
+  document.getElementById("bookingForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    alert("Booking submitted successfully!");
+  });
+</script>
+
+</body>
+</html>
